@@ -11,6 +11,7 @@ namespace GoodsMart.Api.Data
         }
 
         public DbSet<Value> Values { get; set; }
+        public DbSet<Customer> Customers { get; set;}
         
     }
 }
