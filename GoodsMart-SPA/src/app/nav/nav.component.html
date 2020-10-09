@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-md navbar-info fixed-top " style="background-color: aquamarine">
+<nav class="navbar navbar-expand-md navbar-info fixed-top" style="background-color: olivedrab;">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" [routerLink]="['/home']">
             <i class="fa fa-shopping-cart"></i>
            GoodsMart
         </a>    
-        <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Cart</a>
+        <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">            
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/goods']">Products</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/orders']">Cart</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="#">WishList</a>
@@ -34,9 +34,8 @@
             name="username" placeholder="Username"  required [(ngModel)]="model.customername">
             <input class="form-control mr-sm-2" type="password" 
             name="password" placeholder="Password"  required [(ngModel)]="model.password">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit" [disabled]="!loginForm.valid" >Login</button>
+            <button class="btn btn-info my-2 my-sm-0" type="submit" [disabled]="!loginForm.valid" >Login</button>
         </form>
     
-    </div>
-    
+    </div>    
 </nav>

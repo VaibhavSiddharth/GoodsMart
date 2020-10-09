@@ -1,6 +1,6 @@
 <div class="container mt-5">
-    <div  *ngIf="!registerMode" style="text-align: center">
-      <h1 class="text-primary mt-5">Start Shopping!!!!</h1>        
+    <div  *ngIf="!registerMode" class="container p-5"style="text-align: center">
+      <h1 class="text-primary">Start Shopping!!!!</h1>        
       <p class="lead text-dark">GoodsMart is live now...All you need to do is sign up!</p>
       <div class="text-center">
         <button class="btn btn-primary btn-md mr-1" (click)="registerToggle()">Register</button>
@@ -8,7 +8,7 @@
       </div>
     </div>
   
-    <div  *ngIf="registerMode" class="container">
+    <div  *ngIf="registerMode" class="container p-5">
       <div class="row justify-content-center">
         <div class="col-4">
             <app-register  (eventEmitter)="disableRegisterMode($event)"></app-register>
